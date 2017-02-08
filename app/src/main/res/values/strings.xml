@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Trip Calc</string>
+
+    <string name="trip_distance">Trip distance</string>
+    <string name="trip_distance_input">km</string>
+
+    <string name="fuel_consumption">Fuel consumption</string>
+    <string name="fuel_consumption_input">l/100km</string>
+
+    <string name="fuel_price">Fuel price</string>
+    <string name="fuel_price_input">per litre</string>
+
+    <string name="passengers">Number of passengers</string>
+
+    <string name="fuel_consumed">Fuel consumed</string>
+    <string name="fuel_consumed_input">litres</string>
+
+    <string name="distance_traveled">Distance traveled</string>
+    <string name="distance_traveled_input">km</string>
+
+    <string name="calculate_button">Calculate</string>
+
+    <string name="shared_travel_head">Shared travel</string>
+    <string name="fuel_consumption_calc_header">Fuel consumption</string>
+    <!-- MainActivity.java strings -->
+    <string name="litres_per_km">/100km</string>
+    <string name="price_per_person">/ppl</string>
+</resources>

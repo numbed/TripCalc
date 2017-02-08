@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shared_travel_head" />
+
+        <!-- Shared travel user input layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:context=".MainActivity">
+
+                    <EditText
+                        android:id="@+id/tripDistanceField"
+                        style="@style/EditText"
+                        android:hint="@string/trip_distance_input"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        style="@style/SmallHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/trip_distance" />
+
+                </LinearLayout>
+
+                <View style="@style/VerticalSeparator" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/fuelConsumptionField"
+                        style="@style/EditText"
+                        android:hint="@string/fuel_consumption_input"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        style="@style/SmallHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fuel_consumption" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View style="@style/HorizontalSeparator" />
+
+                <View style="@style/HorizontalSeparator" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/information_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:context=".MainActivity">
+
+                    <EditText
+                        android:id="@+id/fuelPriceField"
+                        style="@style/EditText"
+                        android:hint="@string/fuel_price_input"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        style="@style/SmallHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fuel_price" />
+
+
+                </LinearLayout>
+
+                <View style="@style/VerticalSeparator" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:context=".MainActivity">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/decrement"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:onClick="decrement"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/passengersCount"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000000"
+                            android:textSize="50sp" />
+
+                        <Button
+                            android:id="@+id/increment"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:onClick="increment"
+                            android:text="+" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/SmallHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/passengers" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View style="@style/HorizontalSeparator" />
+
+                <View style="@style/HorizontalSeparator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        style="@style/resultDisplay"
+                        android:id="@+id/pricePerPersonResult"
+                        android:layout_width="match_parent"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/SmallHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="per person"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View style="@style/VerticalSeparator" />
+
+
+                <Button
+                    android:id="@+id/sharedTravel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:onClick="calculatePrice"
+                    android:text="@string/calculate_button" />
+
+                <Button
+                    android:id="@+id/resetButton1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="resetSharedTravel"
+                    android:text="X" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- End of shared travel user input layout -->
+
+        <TextView
+            style="@style/SectionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fuel_consumption_calc_header" />
+
+        <!-- Fuel consumption user input layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:context=".MainActivity">
+
+
+                    <EditText
+                        android:id="@+id/fuelConsumedField"
+                        style="@style/EditText"
+                        android:hint="@string/fuel_consumed_input"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/SmallHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fuel_consumed" />
+
+                </LinearLayout>
+
+                <View style="@style/VerticalSeparator" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:context=".MainActivity">
+
+                    <EditText
+                        android:id="@+id/distanceTraveledField"
+                        style="@style/EditText"
+                        android:hint="@string/distance_traveled_input"
+                        android:inputType="numberDecimal" />
+
+                    <TextView
+                        style="@style/SmallHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/distance_traveled" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View style="@style/HorizontalSeparator" />
+
+                <View style="@style/HorizontalSeparator" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        style="@style/resultDisplay"
+                        android:id="@+id/fuelConsumptionResult"
+                        android:layout_width="match_parent"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/SmallHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="per 100 kilometers"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View style="@style/VerticalSeparator" />
+
+                <Button
+                    android:id="@+id/calculateButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:onClick="fuelConsumed"
+                    android:text="@string/calculate_button" />
+
+                <Button
+                    android:id="@+id/resetButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="resetFuelConsumption"
+                    android:text="X" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- End of Fuel consumption user input layout -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="#E64A19">
+
+        </View>
+    </LinearLayout>
+</ScrollView>
